@@ -1,0 +1,20 @@
+{
+  "name": "pomodoro-timer",
+  "version": "0.0.0",
+  "authors": [
+    "Shaoshing <shaoshing@me.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.3"
+  }
+}

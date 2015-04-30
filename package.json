@@ -1,0 +1,43 @@
+{
+  "name": "PomodoroTimer",
+  "author": "Shaoshing Lee",
+  "version": "",
+  "description": "",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "classnames": "^1.2.1",
+    "events": "^1.0.2",
+    "express": "^4.12.3",
+    "flux": "^2.0.1",
+    "object-assign": "^1.0.0",
+    "react": "0.13.2",
+    "react-bootstrap": "^0.21.0",
+    "bower": "^1.4.1",
+    "reactify": "^0.15.2",
+    "envify": "^3.0.0",
+    "browserify": "9.0.8"
+  },
+  "devDependencies": {
+    "jest-cli": "~0.1.17",
+    "uglify-js": "~2.4.15",
+    "watchify": "3.1.2"
+  },
+  "scripts": {
+    "watch-js": "watchify -o js/app.bundle.js -v -d js/app.jsx",
+    "watch-css": "sass --watch css/*.sass",
+    "build": "browserify js/app.jsx > js/app.bundle.js",
+    "test": "jest",
+    "postinstall": "bower install && npm run build"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  },
+  "jest": {
+    "rootDir": "./js"
+  }
+}
